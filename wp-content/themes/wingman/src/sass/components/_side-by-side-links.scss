@@ -1,0 +1,145 @@
+.side-by-side-links {
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+}
+
+.side-by-side-link {
+    box-sizing: border-box;
+    background-size: cover;
+    display: block;
+    max-width: 600px;
+    overflow: hidden;
+
+    @media screen and (max-width: 767px) {
+        position: relative;
+    }
+
+    &__background {
+        background-position: 50% 50%;
+        background-size: cover;
+        bottom: 0;
+        display: block;
+        filter: grayscale(100%);
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    &::after {
+        background: transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: all ease-in-out 0.2s;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 50%;
+    }
+
+    &__content {
+        color: $white;
+        transition: all ease-in-out 0.2s;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+
+    &:nth-of-type(odd) {
+        padding: 10% 5% 5%;
+
+        @media screen and (min-width: 768px) {
+            padding: 10% 5%;
+        }
+
+        .side-by-side-link__background {
+            @media screen and (min-width: 768px) {
+                right: 50%;
+            }
+        }
+
+        &::after {
+            @media screen and (min-width: 768px) {
+                right: 50%;
+            }
+        }
+    }
+
+    &:nth-of-type(even) {
+        padding: 5% 5% 10%;
+
+        @media screen and (min-width: 768px) {
+            padding: 10% 5%;
+        }
+
+        .side-by-side-link__background {
+            @media screen and (min-width: 768px) {
+                left: 50%;
+            }
+        }
+
+        &::after {
+            @media screen and (min-width: 768px) {
+                left: 50%;
+            }
+        }
+    }
+
+
+
+    &--neon:hover {
+        .side-by-side-link__content {
+            color: $gray-darkest;
+        }
+        &::after {
+            background: $green-neon;
+            opacity: 0.75;
+            z-index: -1;
+        }
+    }
+
+    &--light:hover {
+        .side-by-side-link__content {
+            color: $gray-darkest;
+        }
+        &::after {
+            background: $white;
+            opacity: 0.75;
+            z-index: -1;
+        }
+    }
+
+    &--blue:hover {
+        &::after {
+            background: $blue;
+            opacity: 0.75;
+            z-index: -1;
+        }
+    }
+
+    &--dark:hover {
+        &::after {
+            background: $black;
+            opacity: 0.75;
+            z-index: -1;
+        }
+    }
+
+    &:hover {
+        .side-by-side-link__content {
+            transform: scale(1.05);
+        }
+    }
+}

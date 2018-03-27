@@ -1,0 +1,156 @@
+.site {
+    &__header {
+        background: rgba($black, 0.9);
+        position: fixed;
+        width: 100%;
+        z-index: 4;
+
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 1200px;
+            position: relative;
+
+            @media screen and (min-width: 768px) {
+                align-items: center;
+            }
+        }
+    }
+
+    &__nav {
+        bottom: 0;
+        height: 100vh;
+        left: 0;
+        position: fixed;
+        top: 0;
+        transition: all 0.2s ease-in-out;
+        width: 100%;
+        z-index: 1;
+
+        &--closed {
+            transform: translateY(-100%);
+
+            @media screen and (min-width: 768px) {
+                transform: translateY(0%);
+            }
+        }
+
+        &--open {
+            background: $blue-darkest; /* Old browsers */
+            background: linear-gradient(135deg, $blue-dark 0%,$blue-darker 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blue-dark', endColorstr='$blue-darker',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+            transform: translateY(0%);
+
+            @media screen and (min-width: 768px) {
+                background: transparent;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            height: auto;
+            position: relative;
+        }
+    }
+}
+
+.nav-ui {
+    order: 2;
+    padding: 0 1.25rem;
+    z-index: 5;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+
+    &__bar {
+        background: $white;
+        display: block;
+        height: 2px;
+        margin: 0.25rem 0;
+        width: 25px;
+    }
+}
+
+.brand {
+    align-items: center;
+    display: flex;
+    padding: 1.25rem 1rem;
+    position: relative;
+    z-index: 5;
+
+    &__logo {
+        max-width: 220px;
+    }
+}
+
+.site-menu {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: calc(100vh - 5rem);
+    justify-content: center;
+    margin-top: 5rem;
+    padding: 2rem 1rem;
+
+    @media screen and (min-width: 768px) {
+        align-items: center;
+        flex-direction: row;
+        height: auto;
+        justify-content: flex-end;
+        margin-top: 0;
+        padding: 0 0.5rem;
+    }
+
+    &__item {
+        margin: 0.5rem 0;
+        position: relative;
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            margin: 0;
+            width: auto;
+        }
+
+        &--active {
+            &::after {
+                background: $white;
+                border-radius: 9999em;
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 5px;
+                left: 50%;
+                position: absolute;
+                transform: translateX(-50%);
+                width: 5px;
+
+                @media screen and (min-width: 768px) {
+                    background: $blue-light;
+                    bottom: -3px;
+                }
+            }
+        }
+    }
+
+    &__link {
+        color: $gray-lightest;
+        display: block;
+        font-family: $titillium;
+        font-size: 1.5rem;
+        padding: 1rem;
+        transition: all ease-in-out 0.2s;
+        text-align: center;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+        }
+
+        &:hover {
+            background: rgba($white, 0.1);
+            border-radius: 3px;
+        }
+    }
+}

@@ -7,5 +7,23 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'wingman' ); ?></a>
+    <a class="visually-hidden" href="#content"><?php _e( 'Skip to content', 'wingman' ); ?></a>
+
+    <header class="site__header">
+        <div class="site__header-inner">
+            <a class="brand brand__link" href="<?php bloginfo('url') ?>">
+                <img class="brand__logo" src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="">
+            </a>
+
+            <nav class="site__nav site__nav--main site__nav--closed">
+              <?php bem_menu('main_nav', 'site-menu', 'site-menu--main'); ?>
+            </nav>
+
+            <button class="nav-ui" id="menu-toggle">
+                <span class="nav-ui__bar"></span>
+                <span class="nav-ui__bar"></span>
+            </button>
+        </div>
+    </header>
+
     <div id="content">

@@ -1,0 +1,66 @@
+body {
+    color: $black;
+    font-family: $lato;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
+    font-family: $titillium;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 1.75rem;
+}
+
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+    font-family: $titillium;
+    margin-bottom: 1.1rem;
+}
+
+h1,
+.h1 {
+    font-size: calc(32px + (64 - 32) * ((100vw - 300px) / (1600 - 300)));
+}
+
+h2,
+.h2 {
+    font-size: calc(28px + (56 - 28) * ((100vw - 300px) / (1600 - 300)));
+}
+
+h3,
+.h3 {
+    font-size: calc(26px + (52 - 26) * ((100vw - 300px) / (1600 - 300)));
+}
+
+h4,
+.h4 {
+    font-size: calc(24px + (28 - 24) * ((100vw - 300px) / (1600 - 300)));
+}
+
+h5,
+.h5 {
+    font-size: calc(20px + (24 - 20) * ((100vw - 300px) / (1600 - 300)));
+}
+
+h6,
+.h6 {
+    font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)));
+    margin-bottom: 1rem;
+    max-width: 45rem;
+}

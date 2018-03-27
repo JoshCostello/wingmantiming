@@ -1,0 +1,90 @@
+.billboard {
+    &--1 {
+        .board {
+            padding-top: 5rem;
+        }
+    }
+}
+
+.board {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        height: 85vh;
+    }
+
+    @media screen and (min-width: 1200px) {
+        height: 95vh;
+    }
+
+    &__background {
+        background-size: cover;
+        background-repeat: no-repeat;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        transform: scale(1.01);
+        top: 0;
+        z-index: -1;
+
+        &--blurred {
+            filter: blur(2px) grayscale(100%);
+        }
+
+        &--black {
+            background-color: $black;
+
+            @supports (background-blend-mode: luminosity) {
+                background-blend-mode: luminosity;
+            }
+        }
+
+        &--green {
+            background-color: $green-neon;
+
+            @supports (background-blend-mode: luminosity) {
+                background-blend-mode: luminosity;
+            }
+        }
+
+        &--red {
+            background-color: $red;
+
+            @supports (background-blend-mode: luminosity) {
+                background-blend-mode: luminosity;
+            }
+        }
+
+        &--blue {
+            background-color: $blue;
+
+            @supports (background-blend-mode: luminosity) {
+                background-blend-mode: luminosity;
+            }
+        }
+    }
+
+    &__content {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 45rem;
+        padding: 10%;
+        position: relative;
+        z-index: 3;
+
+        img {
+            max-height: 150px;
+            width: auto !important;
+        }
+
+        &--right {
+            text-align: right;
+        }
+    }
+}

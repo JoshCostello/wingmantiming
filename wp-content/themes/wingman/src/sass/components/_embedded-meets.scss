@@ -1,0 +1,245 @@
+.embedded-meets {
+    background: $gray-lightest;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20% 15% 15%;
+
+    @media screen and (min-width: 768px) {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__content {
+        order: 1;
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            width: 49%;
+        }
+
+        &--dark {
+            color: $gray-lightest;
+        }
+
+        &--right {
+            order: 2;
+        }
+
+        &--top {
+            text-align: center;
+
+            @media screen and (min-width: 768px) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__meets {
+        order: 1;
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            width: 49%;
+        }
+
+        &--content-top {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &--list {
+            @media screen and (min-width: 768px) {
+                width: 80%;
+            }
+        }
+    }
+
+    &__list {
+        @media screen and (min-width: 500px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &--dark {
+        background-color: $gray-darkest;
+    }
+}
+
+.embedded-meet {
+    &__date,
+    &__name,
+    &__cta {
+        font-weight: 900;
+    }
+
+    &__date {
+        color: $gray;
+        font-size: 0.8rem;
+    }
+
+    &__name {
+        color: $gray-darker;
+        line-height: 1.2;
+    }
+
+    &__cta {
+        color: $gray-dark;
+        font-size: 0.8rem;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+    }
+}
+
+.embedded-meets__list--grid {
+    .embedded-meet {
+        background-color: $white;
+        border: 1px solid $gray-lighter;
+        border-radius: 3px;
+        margin-bottom: 1rem;
+        transition: all ease-in-out 0.3s;
+
+        &:hover {
+            border: 1px solid $gray-light;
+            box-shadow: 0 1px 0.1rem 0 rgba($gray-darkest, 0.2);
+        }
+
+        &--dark {
+            border-color: transparent;
+
+            &:hover {
+                border-color: $green-neon;
+                box-shadow: 0;
+            }
+        }
+
+        @media screen and (min-width: 500px) {
+            margin-left: 0.5%;
+            margin-right: 0.5%;
+            width: 49%;
+        }
+
+        &__logo {
+            padding: 0.5rem;
+            text-align: center;
+
+            img {
+                border-radius: 9999em;
+                max-width: 80px;
+            }
+        }
+
+        &__date,
+        &__name,
+        &__cta {
+            text-align: center;
+        }
+
+        &__date {
+            padding: 0.5rem 0.5rem 0.25rem;
+        }
+
+        &__name {
+            padding: 0.1rem 0.5rem 0.5rem;
+        }
+
+        &__cta {
+            padding: 0.1rem 0.5rem 0.25rem;
+        }
+
+        &__link {
+            display: block;
+        }
+    }
+}
+
+.embedded-meets__list--list {
+    .embedded-meet {
+        margin-bottom: 1rem;
+        width: 100%;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 1.5rem;
+        }
+
+        &__link {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+
+            @media screen and (min-width: 768px) {
+                align-items: flex-start;
+            }
+
+            @media screen and (min-width: 1024px) {
+                align-items: center;
+            }
+        }
+
+        &__name {
+            box-sizing: border-box;
+            order: 1;
+            padding: 0 0 0 0.5rem;
+            width: calc(100% - 40px);
+
+            @media screen and (min-width: 768px) {
+                padding: 0 0.5rem;
+                width: calc(60% - 40px);
+            }
+        }
+
+        &__logo {
+            order: 1;
+            width: 40px;
+        }
+
+        &__date {
+            margin-left: calc(40px + 0.5rem);
+            order: 2;
+            width: 100%;
+
+            @media screen and (min-width: 768px) {
+                margin-left: 0;
+                padding: 0 0 0 0.5rem;
+                width: calc(40% - 40px);
+            }
+
+            @media screen and (min-width: 1024px) {
+                width: calc(30% - 40px);
+            }
+        }
+
+        &__cta {
+            margin-left: calc(40px + 0.5rem);
+            order: 3;
+
+            @media screen and (min-width: 1024px) {
+                flex: 1 0 auto;
+                margin: 0;
+                text-align: right;
+            }
+        }
+    }
+}
+
+.embedded-meets__list--list.embedded-meets__list--dark {
+    background-color: $white;
+    border: 1px solid $green-neon;
+    border-radius: 3px;
+
+    .embedded-meet {
+        box-sizing: border-box;
+        margin-bottom: 0;
+        padding: 5px;
+
+        &:nth-of-type(even) {
+            background-color: $gray-lightest;
+        }
+
+        &__link {
+            min-height: 50px;
+        }
+    }
+}

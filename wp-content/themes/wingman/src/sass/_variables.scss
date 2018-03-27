@@ -1,0 +1,35 @@
+// Colors
+$black: #22292F;
+$black-true: #000000;
+
+$blue-lightest: #EFF8FF;
+$blue-lighter: #BCDEFA;
+$blue-light: #6CB2EB;
+$blue: #3490DC;
+$blue-dark: #2779BD;
+$blue-darker: #1C3D5A;
+$blue-darkest: #12283A;
+
+$gray-lightest: #F8FAFC;
+$gray-lighter: #F1F5F8;
+$gray-light: #DAE1E7;
+$gray: #B8C2CC;
+$gray-dark: #8795A1;
+$gray-darker: #606F7B;
+$gray-darkest: #3D4852;
+
+$green-neon: #DDF91F;
+$green-bright: #7BF880;
+
+$red: #E3342F;
+
+$white: #ffffff;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,400i,600,600i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,900');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+$titillium: 'Titillium Web', sans-serif;
+$lato: 'Lato', sans-serif;
+$material-icons: 'Material Icons';
