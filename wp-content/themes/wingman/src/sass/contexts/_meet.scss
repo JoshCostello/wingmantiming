@@ -147,7 +147,7 @@
         }
 
         @media screen and (min-width: 768px) {
-            display: flex;
+            position: relative;
         }
     }
 
@@ -270,7 +270,12 @@
         position: relative;
 
         @media screen and (min-width: 768px) {
-            width: 40%;
+            padding-top: 56.25%;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50%;
         }
 
         &-embed {
