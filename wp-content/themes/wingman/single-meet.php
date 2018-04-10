@@ -29,12 +29,24 @@ get_header();
                 </p>
 
                 <ul class="meet__links-list">
-                    <li class="meet__links-list-item">
-                        <a href="<?php echo get_field('results_link'); ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Results</a>
-                    </li>
+                    <?php if(get_field('results')): ?>
+                        <li class="meet__links-list-item">
+                            <a href="<?php echo get_field('results'); ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Live Results</a>
+                        </li>
+                    <?php endif; ?>
+                    <?php if(get_field('heat_sheet')): ?>
+                        <li class="meet__links-list-item">
+                            <a href="<?php echo get_field('heat_sheet')['url']; ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Heat Sheet</a>
+                        </li>
+                    <?php endif; ?>
+                    <?php if(get_field('meet_details')): ?>
+                        <li class="meet__links-list-item">
+                            <a href="<?php echo get_field('meet_details')['url']; ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Meet Details</a>
+                        </li>
+                    <?php endif; ?>
                     <?php if(get_field('website')): ?>
                         <li class="meet__links-list-item">
-                            <a href="<?php echo get_field('website'); ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Website</a>
+                            <a href="<?php echo get_field('website'); ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Meet Website</a>
                         </li>
                     <?php endif; ?>
                 </ul>

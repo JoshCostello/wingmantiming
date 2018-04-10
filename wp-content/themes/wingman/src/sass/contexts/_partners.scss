@@ -1,0 +1,20 @@
+.partners {
+    background: $gray-lighter;
+    padding: 2rem;
+}
+
+.partner {
+    margin: 1rem 1.5rem;
+    max-width: 175px;
+
+    &__logo {
+        filter: grayscale(100%);
+    }
+
+    &__list {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
