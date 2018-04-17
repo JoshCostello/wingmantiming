@@ -34,6 +34,11 @@ get_header();
                             <a href="<?php echo get_field('results'); ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Live Results</a>
                         </li>
                     <?php endif; ?>
+                    <?php if(get_field('final_results')): ?>
+                        <li class="meet__links-list-item">
+                            <a href="<?php echo get_field('final_results'); ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Final Results</a>
+                        </li>
+                    <?php endif; ?>
                     <?php if(get_field('heat_sheet')): ?>
                         <li class="meet__links-list-item">
                             <a href="<?php echo get_field('heat_sheet')['url']; ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Heat Sheet</a>
