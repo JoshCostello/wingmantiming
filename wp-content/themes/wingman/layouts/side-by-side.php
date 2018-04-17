@@ -1,7 +1,7 @@
 <div class="component side-by-side-links">
     <?php while ( have_rows('links') ) : the_row(); ?>
         <?php
-            if(get_sub_field('link-type') == 'internal') {
+            if(get_sub_field('link_type') === 'internal') {
                 $url = get_sub_field('internal_url');
             } else {
                 $url = get_sub_field('external_url');
