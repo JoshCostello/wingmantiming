@@ -22,7 +22,10 @@ get_header();
             <div class="meet__details meet__details--<?php echo get_field('overlay_color'); ?>">
                 <p>
                     <small class="meet__details--small">Dates</small>
-                    <?php if(get_field('start_date') = get_field('end_date')): ?>
+                    <?php
+                        $start_date = get_field('start_date');
+                        $end_date = get_field('end_date');
+                    <?php if($start_date == $end_date): ?>
                         <?php echo get_field('start_date'); ?>
                     <?php else: ?>
                         <?php echo get_field('start_date'); ?> &ndash; <?php echo get_field('end_date'); ?>
