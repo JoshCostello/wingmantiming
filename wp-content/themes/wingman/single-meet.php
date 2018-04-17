@@ -25,6 +25,7 @@ get_header();
                     <?php
                         $start_date = get_field('start_date');
                         $end_date = get_field('end_date');
+                    ?>
                     <?php if($start_date == $end_date): ?>
                         <?php echo get_field('start_date'); ?>
                     <?php else: ?>
