@@ -12,6 +12,7 @@ let mix = require('laravel-mix');
  */
 
 mix.js('src/scripts/app.js', 'dist/scripts/')
+   .js('src/scripts/slider.js', 'dist/scripts/')
    .sass('src/sass/app.scss', 'dist/css/')
    .options({
         processCssUrls: false

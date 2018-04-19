@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "laravel-mix": "^2.0.0"
+    "laravel-mix": "^2.0.0",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
