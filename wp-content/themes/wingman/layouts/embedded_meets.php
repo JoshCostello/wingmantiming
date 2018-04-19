@@ -1,4 +1,4 @@
-<div class="component embedded-meets embedded-meets--<?php echo the_sub_field('background'); ?>">
+<div class="component embedded-meets embedded-meets--bg-<?php echo get_sub_field('background'); ?> embedded-meets--fba-<?php echo get_sub_field('false_bottom_approach'); ?>">
 
     <div class="embedded-meets__content embedded-meets__content--<?php echo the_sub_field('background'); ?> embedded-meets__content--<?php echo the_sub_field('arrangement'); ?>">
         <?php echo the_sub_field('content'); ?>
