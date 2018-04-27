@@ -49,7 +49,7 @@ get_header();
                     <?php endif; ?>
                     <?php if(get_field('heat_sheet')): ?>
                         <li class="meet__links-list-item">
-                            <a href="<?php echo get_field('heat_sheet')['url']; ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Heat Sheet</a>
+                            <a href="<?php echo get_field('heat_sheet')['url']; ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Meet Program</a>
                         </li>
                     <?php endif; ?>
                     <?php if(get_field('meet_details')): ?>
