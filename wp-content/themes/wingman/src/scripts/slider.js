@@ -1,0 +1,1 @@
+$(billboard.target).slick();

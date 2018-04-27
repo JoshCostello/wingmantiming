@@ -2,7 +2,7 @@
 
 <?php $form = get_field('contact_form', 'option'); ?>
 <?php if($form): ?>
-    <?php gravity_form($form['id'], true, true, false, '', true, 1); ?>
+    <?php //gravity_form($form['id'], true, true, false, '', true, 1); ?>
 <?php endif; ?>
 
 <?php $partners = get_field('partners', 'option'); ?>
