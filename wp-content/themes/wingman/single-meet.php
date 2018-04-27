@@ -4,7 +4,7 @@ get_header();
 
     if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-    <header class="meet__header meet__header--<?php echo(get_field('logo')['url'] ? 'has-logo' : 'no-logo'); ?>">
+    <header class="meet__header">
         <div class="meet__banner-background" style="background-image: url('<?php echo get_field('banner_background')['url']; ?>');"></div>
         <div class="meet__name-wrapper meet__name-wrapper--<?php echo get_field('overlay_color'); ?>">
             <h1 class="meet__name"><?php the_title(); ?></h1>
@@ -12,57 +12,59 @@ get_header();
     </header>
 
     <div class="meet__body meet__body--<?php echo(get_field('logo')['url'] ? 'has-logo' : 'no-logo'); ?> meet__body--<?php echo get_field('overlay_color'); ?>">
-        <?php if(get_field('logo')['url']): ?>
-            <div class="meet__logo meet__logo--<?php echo get_field('overlay_color'); ?>">
-                <img src="<?php echo get_field('logo')['url']; ?>" />
-            </div>
-        <?php endif; ?>
-
         <div class="meet__content meet__content--<?php echo(get_field('logo')['url'] ? 'has-logo' : 'no-logo'); ?>">
             <div class="meet__details meet__details--<?php echo get_field('overlay_color'); ?>">
-                <p>
-                    <small class="meet__details--small">Dates</small>
-                    <?php
-                        $start_date = get_field('start_date');
-                        $end_date = get_field('end_date');
-                    ?>
-                    <?php if($start_date == $end_date): ?>
-                        <?php echo get_field('start_date'); ?>
-                    <?php else: ?>
-                        <?php echo get_field('start_date'); ?> &ndash; <?php echo get_field('end_date'); ?>
+                <div class="meet__logo">
+                    <?php if(get_field('logo')['url']): ?>
+                        <img class="meet__logo-image" src="<?php echo get_field('logo')['url']; ?>" />
                     <?php endif; ?>
-                </p>
-                <p><small class="meet__details--small">Location</small>
-                    <?php echo get_field('address')['address']; ?>
-                </p>
+                </div>
 
-                <ul class="meet__links-list">
-                    <?php if(get_field('results')): ?>
-                        <li class="meet__links-list-item">
-                            <a href="<?php echo get_field('results'); ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Live Results</a>
-                        </li>
-                    <?php endif; ?>
-                    <?php if(get_field('final_results')): ?>
-                        <li class="meet__links-list-item">
-                            <a href="<?php echo get_field('final_results'); ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Final Results</a>
-                        </li>
-                    <?php endif; ?>
-                    <?php if(get_field('heat_sheet')): ?>
-                        <li class="meet__links-list-item">
-                            <a href="<?php echo get_field('heat_sheet')['url']; ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Meet Program</a>
-                        </li>
-                    <?php endif; ?>
-                    <?php if(get_field('meet_details')): ?>
-                        <li class="meet__links-list-item">
-                            <a href="<?php echo get_field('meet_details')['url']; ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Meet Details</a>
-                        </li>
-                    <?php endif; ?>
-                    <?php if(get_field('website')): ?>
-                        <li class="meet__links-list-item">
-                            <a href="<?php echo get_field('website'); ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Meet Website</a>
-                        </li>
-                    <?php endif; ?>
-                </ul>
+                <div class="meet__details-inner meet__details-inner--<?php echo get_field('overlay_color'); ?>">
+                    <p>
+                        <small class="meet__details--small">Dates</small>
+                        <?php
+                            $start_date = get_field('start_date');
+                            $end_date = get_field('end_date');
+                        ?>
+                        <?php if($start_date == $end_date): ?>
+                            <?php echo get_field('start_date'); ?>
+                        <?php else: ?>
+                            <?php echo get_field('start_date'); ?> &ndash; <?php echo get_field('end_date'); ?>
+                        <?php endif; ?>
+                    </p>
+                    <p><small class="meet__details--small">Location</small>
+                        <?php echo get_field('address')['address']; ?>
+                    </p>
+
+                    <ul class="meet__links-list">
+                        <?php if(get_field('results')): ?>
+                            <li class="meet__links-list-item">
+                                <a href="<?php echo get_field('results'); ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Live Results</a>
+                            </li>
+                        <?php endif; ?>
+                        <?php if(get_field('final_results')): ?>
+                            <li class="meet__links-list-item">
+                                <a href="<?php echo get_field('final_results'); ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Final Results</a>
+                            </li>
+                        <?php endif; ?>
+                        <?php if(get_field('heat_sheet')): ?>
+                            <li class="meet__links-list-item">
+                                <a href="<?php echo get_field('heat_sheet')['url']; ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Meet Program</a>
+                            </li>
+                        <?php endif; ?>
+                        <?php if(get_field('meet_details')): ?>
+                            <li class="meet__links-list-item">
+                                <a href="<?php echo get_field('meet_details')['url']; ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Meet Details</a>
+                            </li>
+                        <?php endif; ?>
+                        <?php if(get_field('website')): ?>
+                            <li class="meet__links-list-item">
+                                <a href="<?php echo get_field('website'); ?>" class="meet__link meet__link--<?php echo get_field('overlay_color'); ?>">Meet Website</a>
+                            </li>
+                        <?php endif; ?>
+                    </ul>
+                </div>
             </div>
             <div class="meet__map">
                 <div class="meet__map-embed" id="map"></div>

@@ -1,9 +1,5 @@
-.billboard {
-    &--1 {
-        .board {
-            padding-top: 5rem;
-        }
-    }
+.billboard.first-block {
+    padding-top: 0;
 }
 
 .board {

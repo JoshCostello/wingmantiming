@@ -302,3 +302,11 @@
         max-width: 56.25rem;
     }
 }
+
+.basic.first-block {
+    padding-top: 8rem;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 12rem;
+    }
+}
