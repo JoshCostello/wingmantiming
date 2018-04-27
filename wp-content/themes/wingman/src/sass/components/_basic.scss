@@ -210,6 +210,150 @@
             }
         }
 
+        &-red {
+            background: $red;
+            color: $gray-lightest;
+
+            &.basic--fba-overlap {
+                &::before {
+                    background: $red;
+                }
+            }
+
+            &.basic--fba-scroll {
+                &::before {
+                    background-color: $red;
+                    background-image: url('data:image/svg+xml;utf8,<svg fill="#F8FAFC" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+                }
+            }
+
+            &.basic--fba-angles {
+                &::before {
+                    background-image: url('data:image/svg+xml;utf8,<svg width="2500px" height="100px" viewBox="0 0 2500 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Triangle" fill="#E3342F" points="421.720391 0 2500 100 0 100"></polygon></g></svg>');
+                }
+
+                &::after {
+                    background-image: url('data:image/svg+xml;utf8,<svg width="2500px" height="100px" viewBox="0 0 2500 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Triangle" fill="#E3342F" transform="translate(1250.000000, 50.000000) scale(-1, -1) translate(-1250.000000, -50.000000)" points="421.720391 0 2500 100 0 100"></polygon></g></svg>');
+                }
+            }
+
+            &.basic--fba-sash_left {
+                &::before {
+                    background-image: url('data:image/svg+xml;utf8,<svg width="2000px" height="100px" viewBox="0 0 2000 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Triangle" fill="#E3342F" transform="translate(1000.000000, 50.000000) scale(-1, 1) translate(-1000.000000, -50.000000) " points="1999.96411 0 2000 100 0 100"></polygon></g></svg>');
+                }
+
+                &::after {
+                    background-image: url('data:image/svg+xml;utf8,<svg width="2000px" height="100px" viewBox="0 0 2000 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Triangle" fill="#E3342F" transform="translate(1000.000000, 50.000000) scale(1, -1) translate(-1000.000000, -50.000000) " points="1999.96411 0 2000 100 0 100"></polygon></g></svg>');
+                }
+            }
+
+            &.basic--fba-sash_right {
+                &::before {
+                    background-image: url('data:image/svg+xml;utf8,<svg width="2000px" height="100px" viewBox="0 0 2000 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Triangle" fill="#E3342F" points="1999.96411 0 2000 100 0 100"></polygon></g></svg>');
+                }
+
+                &::after {
+                    background-image: url('data:image/svg+xml;utf8,<svg width="2000px" height="100px" viewBox="0 0 2000 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Triangle" fill="#E3342F" transform="translate(1000.000000, 50.000000) scale(-1, -1) translate(-1000.000000, -50.000000) " points="1999.96411 0 2000 100 0 100"></polygon></g></svg>');
+                }
+            }
+        }
+
+        &-orange {
+            background: $orange;
+            color: $gray-lightest;
+
+            &.basic--fba-overlap {
+                &::before {
+                    background: $orange;
+                }
+            }
+
+            &.basic--fba-scroll {
+                &::before {
+                    background-color: $orange;
+                    background-image: url('data:image/svg+xml;utf8,<svg fill="#F8FAFC" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+                }
+            }
+
+            &.basic--fba-angles {
+                &::before {
+                    background-image: url('data:image/svg+xml;utf8,<svg width="2500px" height="100px" viewBox="0 0 2500 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Triangle" fill="#DE751F" points="421.720391 0 2500 100 0 100"></polygon></g></svg>');
+                }
+
+                &::after {
+                    background-image: url('data:image/svg+xml;utf8,<svg width="2500px" height="100px" viewBox="0 0 2500 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Triangle" fill="#DE751F" transform="translate(1250.000000, 50.000000) scale(-1, -1) translate(-1250.000000, -50.000000)" points="421.720391 0 2500 100 0 100"></polygon></g></svg>');
+                }
+            }
+
+            &.basic--fba-sash_left {
+                &::before {
+                    background-image: url('data:image/svg+xml;utf8,<svg width="2000px" height="100px" viewBox="0 0 2000 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Triangle" fill="#DE751F" transform="translate(1000.000000, 50.000000) scale(-1, 1) translate(-1000.000000, -50.000000) " points="1999.96411 0 2000 100 0 100"></polygon></g></svg>');
+                }
+
+                &::after {
+                    background-image: url('data:image/svg+xml;utf8,<svg width="2000px" height="100px" viewBox="0 0 2000 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Triangle" fill="#DE751F" transform="translate(1000.000000, 50.000000) scale(1, -1) translate(-1000.000000, -50.000000) " points="1999.96411 0 2000 100 0 100"></polygon></g></svg>');
+                }
+            }
+
+            &.basic--fba-sash_right {
+                &::before {
+                    background-image: url('data:image/svg+xml;utf8,<svg width="2000px" height="100px" viewBox="0 0 2000 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Triangle" fill="#DE751F" points="1999.96411 0 2000 100 0 100"></polygon></g></svg>');
+                }
+
+                &::after {
+                    background-image: url('data:image/svg+xml;utf8,<svg width="2000px" height="100px" viewBox="0 0 2000 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Triangle" fill="#DE751F" transform="translate(1000.000000, 50.000000) scale(-1, -1) translate(-1000.000000, -50.000000) " points="1999.96411 0 2000 100 0 100"></polygon></g></svg>');
+                }
+            }
+        }
+
+        &-purple {
+            background: $purple;
+            color: $gray-lightest;
+
+            &.basic--fba-overlap {
+                &::before {
+                    background: $purple;
+                }
+            }
+
+            &.basic--fba-scroll {
+                &::before {
+                    background-color: $purple;
+                    background-image: url('data:image/svg+xml;utf8,<svg fill="#F8FAFC" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+                }
+            }
+
+            &.basic--fba-angles {
+                &::before {
+                    background-image: url('data:image/svg+xml;utf8,<svg width="2500px" height="100px" viewBox="0 0 2500 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Triangle" fill="#794ACF" points="421.720391 0 2500 100 0 100"></polygon></g></svg>');
+                }
+
+                &::after {
+                    background-image: url('data:image/svg+xml;utf8,<svg width="2500px" height="100px" viewBox="0 0 2500 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Triangle" fill="#794ACF" transform="translate(1250.000000, 50.000000) scale(-1, -1) translate(-1250.000000, -50.000000)" points="421.720391 0 2500 100 0 100"></polygon></g></svg>');
+                }
+            }
+
+            &.basic--fba-sash_left {
+                &::before {
+                    background-image: url('data:image/svg+xml;utf8,<svg width="2000px" height="100px" viewBox="0 0 2000 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Triangle" fill="#794ACF" transform="translate(1000.000000, 50.000000) scale(-1, 1) translate(-1000.000000, -50.000000) " points="1999.96411 0 2000 100 0 100"></polygon></g></svg>');
+                }
+
+                &::after {
+                    background-image: url('data:image/svg+xml;utf8,<svg width="2000px" height="100px" viewBox="0 0 2000 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Triangle" fill="#794ACF" transform="translate(1000.000000, 50.000000) scale(1, -1) translate(-1000.000000, -50.000000) " points="1999.96411 0 2000 100 0 100"></polygon></g></svg>');
+                }
+            }
+
+            &.basic--fba-sash_right {
+                &::before {
+                    background-image: url('data:image/svg+xml;utf8,<svg width="2000px" height="100px" viewBox="0 0 2000 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Triangle" fill="#794ACF" points="1999.96411 0 2000 100 0 100"></polygon></g></svg>');
+                }
+
+                &::after {
+                    background-image: url('data:image/svg+xml;utf8,<svg width="2000px" height="100px" viewBox="0 0 2000 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Triangle" fill="#794ACF" transform="translate(1000.000000, 50.000000) scale(-1, -1) translate(-1000.000000, -50.000000) " points="1999.96411 0 2000 100 0 100"></polygon></g></svg>');
+                }
+            }
+        }
+
         &-neon {
             background: $green-neon;
             color: $gray-darkest;

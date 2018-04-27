@@ -54,6 +54,24 @@
                 }
             }
 
+            &--red {
+                &::after {
+                    background: $red;
+                }
+            }
+
+            &--orange {
+                &::after {
+                    background: $orange;
+                }
+            }
+
+            &--purple {
+                &::after {
+                    background: $purple;
+                }
+            }
+
             &--green {
                 &::after {
                     background: $green-bright;
@@ -93,6 +111,18 @@
 
         &--neon {
             border-color: $green-neon;
+        }
+
+        &--red {
+            border-color: $red;
+        }
+
+        &--orange {
+            border-color: $orange;
+        }
+
+        &--purple {
+            border-color: $purple;
         }
 
         &--blue {
@@ -152,6 +182,18 @@
             border: 10px solid $green-neon;
         }
 
+        &--red {
+            border: 10px solid $red;
+        }
+
+        &--orange {
+            border: 10px solid $orange;
+        }
+
+        &--purple {
+            border: 10px solid $purple;
+        }
+
         &--dark {
             border: 10px solid $gray-dark;
         }
@@ -179,6 +221,18 @@
 
             &--neon {
                 border-color: $green-neon;
+            }
+
+            &--red {
+                border-color: $red;
+            }
+
+            &--orange {
+                border-color: $orange;
+            }
+
+            &--purple {
+                border-color: $purple;
             }
 
             &--dark {
@@ -241,6 +295,30 @@
 
             &:hover {
                 box-shadow: inset 0px -12px 0px 0px rgba($green-neon, 0.75);
+            }
+        }
+
+        &--red {
+            box-shadow: inset 0px -8px 0px 0px rgba($red, 0.75);
+
+            &:hover {
+                box-shadow: inset 0px -12px 0px 0px rgba($red, 0.75);
+            }
+        }
+
+        &--orange {
+            box-shadow: inset 0px -8px 0px 0px rgba($orange, 0.75);
+
+            &:hover {
+                box-shadow: inset 0px -12px 0px 0px rgba($orange, 0.75);
+            }
+        }
+
+        &--purple {
+            box-shadow: inset 0px -8px 0px 0px rgba($purple, 0.75);
+
+            &:hover {
+                box-shadow: inset 0px -12px 0px 0px rgba($purple, 0.75);
             }
         }
 

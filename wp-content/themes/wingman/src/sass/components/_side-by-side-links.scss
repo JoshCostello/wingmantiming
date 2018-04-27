@@ -129,6 +129,30 @@
         }
     }
 
+    &--red:hover {
+        &::after {
+            background: $red;
+            opacity: 0.75;
+            z-index: -1;
+        }
+    }
+
+    &--orange:hover {
+        &::after {
+            background: $orange;
+            opacity: 0.75;
+            z-index: -1;
+        }
+    }
+
+    &--purple:hover {
+        &::after {
+            background: $purple;
+            opacity: 0.75;
+            z-index: -1;
+        }
+    }
+
     &--dark:hover {
         &::after {
             background: $black;
