@@ -1,4 +1,4 @@
-<div class="component side-by-side-links">
+<div class="component side-by-side-links <?php echo($block_count == 1 ? 'first-block' : ''); ?>">
     <?php while ( have_rows('links') ) : the_row(); ?>
         <?php
             if(get_sub_field('link_type') === 'internal') {

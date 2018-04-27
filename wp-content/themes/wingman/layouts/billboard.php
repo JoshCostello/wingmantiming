@@ -1,4 +1,4 @@
-<div class="component billboard billboard--<?php echo $block_count; ?>">
+<div class="component billboard billboard--<?php echo $block_count; ?> <?php echo($block_count == 1 ? 'first-block' : ''); ?>">
     <?php $board_count = 1; ?>
     <?php while ( have_rows('boards') ) : the_row(); ?>
         <div class="board board--<?php echo $board_count; ?>">
