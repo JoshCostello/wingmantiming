@@ -9,8 +9,7 @@ function add_scripts() {
     wp_register_script("jquery", "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js", false, '1.12.4', true);
     wp_enqueue_script("jquery");
     wp_enqueue_script("app", get_template_directory_uri()."/dist/scripts/app.js", array("jquery"), false, true);
-    wp_enqueue_script("slick", "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js", array("jquery"), false, true);
-    wp_register_script("slider", get_template_directory_uri()."/dist/scripts/slider.js", array("jquery", "slick"), false, true);
+    wp_register_script("slider", get_template_directory_uri()."/dist/scripts/slider.js", array("jquery"), false, true);
     // wp_enqueue_script("media-check", get_template_directory_uri()."/js/plugins/media-check.js", array("jquery"), false, true);
     // wp_enqueue_script("nav", get_template_directory_uri()."/js/nav.js", array("media-check"), false, true );
     // wp_enqueue_script("lazyload-images", get_template_directory_uri()."/js/min/lazyload-images.js", null, false, true );

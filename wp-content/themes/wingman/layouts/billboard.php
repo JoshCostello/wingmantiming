@@ -1,4 +1,4 @@
-<div id="billboard-<?php echo $block_count; ?>" class="component billboard billboard--<?php echo $block_count; ?> <?php echo($block_count == 1 ? 'first-block' : ''); ?>">
+<div id="billboard-<?php echo $block_count; ?>" class="component billboard billboard--<?php echo $block_count; ?> <?php echo($block_count == 1 ? 'first-block' : 'not-first-block'); ?> <?php echo(get_sub_field('should_rotate') ? 'slider' : 'no-slider'); ?>">
     <?php $board_count = 1; ?>
     <?php while ( have_rows('boards') ) : the_row(); ?>
         <div class="board board--<?php echo $board_count; ?>">
