@@ -1,7 +1,15 @@
 .embedded-meets {
     background: $gray-lightest;
-    padding: 12% 15%;
+    padding: 12% 15% 12%;
     position: relative;
+
+    &.first-block {
+        padding: 40% 15% 12%;
+
+        @media screen and (min-width: 768px) {
+            padding: 20% 15% 12%;
+        }
+    }
 
     &--fba {
         &-overlap {
