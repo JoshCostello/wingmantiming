@@ -11,7 +11,9 @@
         <ul class="partner__list">
             <?php foreach ($partners as $partner): ?>
                 <li class="partner">
+                    <?php if($partner['partner_url'] !== ''): ?><a href="<?php echo $partner['partner_url']; ?>"><?php endif; ?>
                     <img class="partner__logo" src="<?php echo $partner['partner']['url']; ?>" />
+                    <?php if($partner['partner_url'] !== ''): ?></a><?php endif; ?>
                 </li>
             <?php endforeach; ?>
         </ul>
