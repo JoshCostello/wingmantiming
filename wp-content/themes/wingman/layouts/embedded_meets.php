@@ -12,12 +12,10 @@
                 'post_status'   => 'publish',
                 'meta_key'      => 'start_date',
                 'orderby'       => 'meta_value_num',
-                'order'         => 'ASC',
             );
 
             switch (get_sub_field('which_meets')) {
                 case 'all_year':
-
                     $year_start = get_sub_field('year') . '-01-01';
                     $year_end = get_sub_field('year') . '-12-31';
 
@@ -30,6 +28,7 @@
                             'compare' => 'BETWEEN'
                         ),
                     );
+                    $args['order'] = 'ASC';
                     break;
 
                 case 'complete':
@@ -42,6 +41,7 @@
                             'compare' => '<='
                         ),
                     );
+                    $args['order'] = 'DESC';
                     break;
 
                 case 'upcoming':
@@ -54,10 +54,12 @@
                             'compare' => '>='
                         ),
                     );
+                    $args['order'] = 'ASC';
                     break;
                 
                 default:
                     $args['posts_per_page'] = -1;
+                    $args['order'] = 'ASC';
                     break;
             }
 
