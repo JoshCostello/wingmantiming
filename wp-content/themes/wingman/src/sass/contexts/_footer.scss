@@ -79,6 +79,27 @@
         width: 50%;
     }
 
+    &__item {
+        color: $gray-lightest;
+        text-align: center;
+
+        @media screen and (min-width: 768px) {
+            text-align: left;
+        }
+
+        &--logo {
+            padding: 1rem 0;
+
+            @media screen and (min-width: 768px) {
+                padding: 0 0;
+            }
+        }
+
+        &--detail {
+            margin-bottom: 0;
+        }
+    }
+
     &__logo {
         max-width: 250px;
     }

@@ -1,10 +1,5 @@
 </div>
 
-<?php $form = get_field('contact_form', 'option'); ?>
-<?php if($form): ?>
-    <?php //gravity_form($form['id'], true, true, false, '', true, 1); ?>
-<?php endif; ?>
-
 <?php $partners = get_field('partners', 'option'); ?>
 <?php if($partners): ?>
     <div class="partners">
@@ -28,7 +23,26 @@
         </nav>
 
         <div class="contact">
-            <img class="contact__logo" src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="">
+            <?php $email = get_field('email', 'option'); ?>
+            <?php $phone = get_field('phone', 'option'); ?>
+            <?php $city = get_field('city', 'option'); ?>
+            <?php $state = get_field('state', 'option'); ?>
+
+            <p class="contact__item  contact__item--logo">
+                <img class="contact__logo" src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="">
+            </p>
+
+            <?php if($email !== ''): ?>
+                <p class="contact__item contact__item--detail"><?php echo $email;?></p>
+            <?php endif; ?>
+
+            <?php if($phone !== ''): ?>
+                <p class="contact__item contact__item--detail"><?php echo $phone;?></p>
+            <?php endif; ?>
+
+            <?php if($city !== '' && $state !== ''): ?>
+                <p class="contact__item contact__item--detail"><?php echo $city;?>, <?php echo $state; ?></p>
+            <?php endif; ?>
         </div>
     </div>
     
