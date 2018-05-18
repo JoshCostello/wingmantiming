@@ -38,4 +38,4 @@
         </div>
     </header>
 
-    <div id="content">
+    <div id="content" class="site__content">

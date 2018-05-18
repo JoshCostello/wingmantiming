@@ -6,6 +6,9 @@
 
 @import "typography";
 
+.site__content {
+    overflow: hidden;
+}
 // Site Contexts
 @import "contexts/navigation";
 @import "contexts/meet";
