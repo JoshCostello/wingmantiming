@@ -28,16 +28,6 @@
         width: calc(100% - ((1.25rem * 2) + 25px));
         z-index: 1;
 
-        // &::before {
-        //     background: $blue-dark;
-        //     content: "";
-        //     height: 5rem;
-        //     left: 0;
-        //     position: absolute;
-        //     right: 0;
-        //     top: 0;
-        // }
-
         &--closed {
             transform: translateX(-100%);
 
