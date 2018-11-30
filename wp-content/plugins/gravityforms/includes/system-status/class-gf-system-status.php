@@ -128,7 +128,8 @@ class GF_System_Status {
 		<div class="wrap <?php echo GFCommon::get_browser_class() ?>">
 
 			<h2><?php esc_html_e( 'System Status', 'gravityforms' ) ?></h2>
-			<?php GFCommon::display_dismissible_message(); ?>
+			<?php GFCommon::display_admin_message();
+			GFCommon::display_dismissible_message(); ?>
 
 			<div id="gform_tab_group" class="gform_tab_group vertical_tabs">
 
@@ -166,12 +167,6 @@ class GF_System_Status {
 			<br class="clear" style="clear: both;" />
 
 		</div> <!-- / wrap -->
-
-		<script type="text/javascript">
-			jQuery(document).ready( function( $ ) {
-				$( '.gform_tab_container' ).css( 'minHeight', jQuery( '#gform_tabs' ).height() + 100 );
-			} );
-		</script>
 
 		<?php
 		}

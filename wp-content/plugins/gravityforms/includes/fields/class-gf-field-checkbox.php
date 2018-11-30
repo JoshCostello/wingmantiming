@@ -154,10 +154,6 @@ class GF_Field_Checkbox extends GF_Field {
 
 				$input_value = rgpost( 'input_' . str_replace( '.', '_', strval( $input['id'] ) ) );
 
-				if ( is_array( $input_value ) ) {
-					 $input_value = '';
-				}
-
 				$value[ strval( $input['id'] ) ] = $input_value;
 
 			} else {
@@ -584,13 +580,13 @@ class GF_Field_Checkbox extends GF_Field {
 				// Prepare input ID.
 				$input_id = $this->id . '.' . $choice_number;
 
-				if ( $is_entry_detail || $is_form_editor || $form_id == 0 ){
+				if ( $is_entry_detail || $is_form_editor || $form_id == 0 ) {
 					$id = $this->id . '_' . $choice_number ++;
 				} else {
 					$id = $form_id . '_' . $this->id . '_' . $choice_number ++;
 				}
 
-				if ( ! isset( $_GET['gf_token'] ) && empty( $_POST ) && rgar( $choice, 'isSelected' ) ) {
+				if ( ( $is_form_editor || ( ! isset( $_GET['gf_token'] ) && empty( $_POST ) ) ) && rgar( $choice, 'isSelected' ) ) {
 					$checked = "checked='checked'";
 				} elseif ( is_array( $value ) && GFFormsModel::choice_value_match( $this, $choice, rgget( $input_id, $value ) ) ) {
 					$checked = "checked='checked'";
@@ -599,8 +595,6 @@ class GF_Field_Checkbox extends GF_Field {
 				} else {
 					$checked = '';
 				}
-
-				$logic_event = $this->get_conditional_logic_event( 'click' );
 
 				$tabindex     = $this->get_tabindex();
 				$choice_value = $choice['value'];
@@ -612,7 +606,7 @@ class GF_Field_Checkbox extends GF_Field {
 
 				$choice_value  = esc_attr( $choice_value );
 				$choice_markup = "<li class='gchoice_{$id}'>
-								<input name='input_{$input_id}' type='checkbox' $logic_event value='{$choice_value}' {$checked} id='choice_{$id}' {$tabindex} {$disabled_text} />
+								<input name='input_{$input_id}' type='checkbox'  value='{$choice_value}' {$checked} id='choice_{$id}' {$tabindex} {$disabled_text} />
 								<label for='choice_{$id}' id='label_{$id}'>{$choice['text']}</label>
 							</li>";
 
@@ -845,6 +839,19 @@ class GF_Field_Checkbox extends GF_Field {
 
 		return $value;
 
+	}
+
+	// # FIELD FILTER UI HELPERS ---------------------------------------------------------------------------------------
+
+	/**
+	 * Returns the filter operators for the current field.
+	 *
+	 * @since 2.4
+	 *
+	 * @return array
+	 */
+	public function get_filter_operators() {
+		return array( 'is' );
 	}
 
 }
