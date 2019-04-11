@@ -57,7 +57,7 @@
                         'compare' => 'BETWEEN'
                     ),
                 );
-                $args['order'] = 'ASC';
+                $args['order'] = 'DESC';
                 break;
 
             case 'upcoming':
