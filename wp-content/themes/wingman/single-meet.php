@@ -28,11 +28,13 @@ get_header();
                 border-color: <?php echo $raw_color; ?>;
             }
 
-            .meet__link--<?php echo $overlay_color; ?> {
+            .meet__link--<?php echo $overlay_color; ?>,
+            .results__link {
                 box-shadow: inset 0px -8px 0px 0px <?php echo hex2rgba($raw_color, 0.75); ?>;
             }
 
-            .meet__link--<?php echo $overlay_color; ?>:hover {
+            .meet__link--<?php echo $overlay_color; ?>:hover,
+            .results__link::hover {
                 box-shadow: inset 0px -12px 0px 0px <?php echo hex2rgba($raw_color, 0.75); ?>;
             }
         </style>
@@ -100,6 +102,41 @@ get_header();
                     </ul>
                 </div>
             </div>
+            <?php if (get_field('multi-day-event') && have_rows('grouped_results')): ?>
+                <?php if (!empty(get_sub_field('multi_day_header'))): ?>
+                    <h2 class="daily-results__headline"><?php echo get_sub_field('multi_day_header'); ?></h2>
+                <?php endif; ?>
+
+                <ol class="daily-results__list">
+                <?php while (have_rows('grouped_results')) : the_row(); ?>
+                    <li class="daily-results__list-item">
+                        <h3 class="daily-results__heading"><?php echo the_sub_field('result_group'); ?></h3>
+                        <?php if (have_rows('result_list')): ?>
+                            <ul class="results__list">
+                            <?php while (have_rows('result_list')) : the_row(); ?>
+                                <li class="results__list-item">
+                                    <?php
+                                        switch (get_sub_field('result_link_type')) {
+                                            case 'url':
+                                                echo '<a class="results__link results__link--'.$overlay_color.'" href="'.get_sub_field("result_link_url").'">'.get_sub_field('result_link_name').'</a>';
+                                            break;
+                                            case 'file':
+                                                echo '<a class="results__link results__link--'.$overlay_color.'" href="'.get_sub_field("result_link_file").'">'.get_sub_field('result_link_name').'</a>';
+                                            break;
+                                            case 'none':
+                                            default:
+                                                echo '<span class="results__non-link">'.get_sub_field("result_link_name").'</span>';
+                                            break;
+                                        }
+                                    ?>
+                                </li>
+                            <?php endwhile; ?>
+                            </ul>
+                        <?php endif; ?>
+                    </li>
+                <?php endwhile; ?>
+                </ol>
+            <?php endif; ?>
             <div class="meet__map">
                 <div class="meet__map-embed" id="map"></div>
             </div>
