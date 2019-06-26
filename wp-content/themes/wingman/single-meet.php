@@ -29,12 +29,12 @@ get_header();
             }
 
             .meet__link--<?php echo $overlay_color; ?>,
-            .results__link {
+            .results__link--<?php echo $overlay_color; ?> {
                 box-shadow: inset 0px -2px 0px 0px <?php echo hex2rgba($raw_color, 0.75); ?>;
             }
 
             .meet__link--<?php echo $overlay_color; ?>:hover,
-            .results__link::hover {
+            .results__link--<?php echo $overlay_color; ?>::hover {
                 box-shadow: inset 0px -6px 0px 0px <?php echo hex2rgba($raw_color, 0.75); ?>;
             }
         </style>
