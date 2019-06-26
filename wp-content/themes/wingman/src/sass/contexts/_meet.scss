@@ -367,13 +367,21 @@
         }
     }
     &__list-item {
+        text-align: center;
+
         @media screen and (min-width: 768px) {
             padding: 0 1.5em 1em;
+            text-align: left;
         }
     }
     &__heading {
         font-size: 2em;
         margin-bottom: 0.25em;
+        text-align: center;
+
+        @media screen and (min-width: 768px) {
+            text-align: left;
+        }
     }
 }
 
@@ -384,58 +392,58 @@
         transition: all ease-in-out 0.2s;
 
         &--green {
-            box-shadow: inset 0px -8px 0px 0px rgba($green-bright, 0.75);
+            box-shadow: inset 0px -2px 0px 0px rgba($green-bright, 0.75);
 
             &:hover {
-                box-shadow: inset 0px -12px 0px 0px rgba($green-bright, 0.75);
+                box-shadow: inset 0px -6px 0px 0px rgba($green-bright, 0.75);
             }
         }
 
         &--blue {
-            box-shadow: inset 0px -8px 0px 0px rgba($blue, 0.75);
+            box-shadow: inset 0px -2px 0px 0px rgba($blue, 0.75);
 
             &:hover {
-                box-shadow: inset 0px -12px 0px 0px rgba($blue, 0.75);
+                box-shadow: inset 0px -6px 0px 0px rgba($blue, 0.75);
             }
         }
 
         &--neon {
-            box-shadow: inset 0px -8px 0px 0px rgba($green-neon, 0.75);
+            box-shadow: inset 0px -2px 0px 0px rgba($green-neon, 0.75);
 
             &:hover {
-                box-shadow: inset 0px -12px 0px 0px rgba($green-neon, 0.75);
+                box-shadow: inset 0px -6px 0px 0px rgba($green-neon, 0.75);
             }
         }
 
         &--red {
-            box-shadow: inset 0px -8px 0px 0px rgba($red, 0.75);
+            box-shadow: inset 0px -2px 0px 0px rgba($red, 0.75);
 
             &:hover {
-                box-shadow: inset 0px -12px 0px 0px rgba($red, 0.75);
+                box-shadow: inset 0px -6px 0px 0px rgba($red, 0.75);
             }
         }
 
         &--orange {
-            box-shadow: inset 0px -8px 0px 0px rgba($orange, 0.75);
+            box-shadow: inset 0px -2px 0px 0px rgba($orange, 0.75);
 
             &:hover {
-                box-shadow: inset 0px -12px 0px 0px rgba($orange, 0.75);
+                box-shadow: inset 0px -6px 0px 0px rgba($orange, 0.75);
             }
         }
 
         &--purple {
-            box-shadow: inset 0px -8px 0px 0px rgba($purple, 0.75);
+            box-shadow: inset 0px -2px 0px 0px rgba($purple, 0.75);
 
             &:hover {
-                box-shadow: inset 0px -12px 0px 0px rgba($purple, 0.75);
+                box-shadow: inset 0px -6px 0px 0px rgba($purple, 0.75);
             }
         }
 
         &--dark {
-            box-shadow: inset 0px -8px 0px 0px rgba($gray-dark, 0.75);
+            box-shadow: inset 0px -2px 0px 0px rgba($gray-dark, 0.75);
 
             &:hover {
-                box-shadow: inset 0px -12px 0px 0px rgba($gray-dark, 0.75);
+                box-shadow: inset 0px -6px 0px 0px rgba($gray-dark, 0.75);
             }
         }
     }
